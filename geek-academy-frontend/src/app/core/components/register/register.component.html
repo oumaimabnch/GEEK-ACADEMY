@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 mx-auto mb-3">
+      <div class="card shadow-sm rounded py-5">
+        <h2 class="card-title text-center">Sign up</h2>
+
+        <div class="card-body">
+          <form
+            [formGroup]="registerForm"
+            (ngSubmit)="onSubmit()"
+            class="form-signin w-75 mx-auto"
+          >
+            <div class="input-group mb-4">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <span class="material-icons"> account_circle </span>
+                </span>
+              </div>
+              <input
+                type="name"
+                id="inputName"
+                formControlName="name"
+                class="form-control rounded-right"
+                placeholder="Name"
+                required
+                autofocus
+              />
+              <label for="inputName"></label>
+            </div>
+
+            <div class="input-group mb-4">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <span class="material-icons"> mail </span>
+                </span>
+              </div>
+              <input
+                type="email"
+                id="inputEmail"
+                formControlName="email"
+                class="form-control rounded-right"
+                placeholder="Email address"
+                required
+                autofocus
+              />
+              <label for="inputEmail"></label>
+            </div>
+            <div class="input-group mb-4">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"
+                  ><span class="material-icons"> lock </span></span
+                >
+              </div>
+              <input
+                type="password"
+                id="inputPassword"
+                formControlName="password"
+                class="form-control"
+                placeholder="Password"
+                required
+              />
+            </div>
+
+            <div class="input-group mb-4">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend"
+                  ><span class="material-icons"> repeat </span></span
+                >
+              </div>
+
+              <input
+                type="password"
+                id="inputRPassword"
+                formControlName="password_confirmation"
+                class="form-control"
+                placeholder="Retype Password"
+                required
+              />
+            </div>
+
+            <button
+              class="btn btn-lg btn-block text-uppercase text-white rounded-pill mt-4 bg-teal"
+              type="submit"
+            >
+              Sign up
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="wrapper mx-auto ">
+  <div class="title">Login Form</div>
+  <form
+    class=""
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="field">
+      <input
+        type="text"
+        formControlName="username"
+        id="inputUsername"
+        class=""
+        required
+        autofocus
+      />
+      <label>Username</label>
+    </div>
+    <div class="field">
+      <input
+        type="password"
+        id="inputPassword"
+        formControlName="password"
+        class=""
+        required
+      />
+      <label>Password</label>
+    </div>
+    <div class="content mt-2">
+      <div class="checkbox">
+        <input type="checkbox" id="remember-me" />
+        <label for="remember-me" class="m-0">Remember me</label>
+      </div>
+      <div class="pass-link">
+        <a href="#">Forgot password?</a>
+      </div>
+    </div>
+    <div class="field">
+      <input type="submit" value="Login" />
+    </div>
+    <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+<div
+  class="card border-0 col-lg-6 col-md-9 col-sm-12 mx-auto my-3 shadow-sm"
+  style="border-radius: 7px"
+>
+  <div class="card-header h5 bg-white mt-1">
+    <p class="h5 muted">
+      <img
+        gravatar
+        class="rounded-circle"
+        [email]="post.author.email"
+        [size]="40"
+        [fallback]="'wavatar'"
+      />
+      author
+    </p>
+    <strong>{{ this.post.title }}</strong>
+  </div>
+  <div class="card-body">
+    <div [innerHTML]="post.texBody"></div>
+
+    <p>{{ post.description }}</p>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="col-lg-6 col-md-9 col-sm-12 wrapper mx-auto">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title form</label>
+    <input
+      type="text"
+      class="form-control shadow-sm"
+      name=""
+      id="title"
+      aria-describedby="helpId"
+      placeholder="Put your title"
+      [(ngModel)]="post.title"
+    />
+    <small id="helpId" class="form-text text-muted"> </small>
+  </div>
+  <div
+    id="froala-editor"
+    [froalaEditor]
+    style="display: block"
+    [(froalaModel)]="post.textBody"
+    class="shadow"
+  >
+    
+  </div>
+
+  <div>
+    <button
+      type="button"
+      class="btn shadow float-right w-25 mr-1 mt-2 btn-success"
+      (click)="submit()"
+    >
+      Submit
+    </button>
+  </div>
+  
+  <p> {{post.textBody}} </p>
+</div>
