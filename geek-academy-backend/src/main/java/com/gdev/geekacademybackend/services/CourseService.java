@@ -66,6 +66,8 @@ public class CourseService {
         Course course = courseRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Course", "id", id));
         return course;
+
+        
     }
 
     public void subscribeOnCourse(Long courseId) {
